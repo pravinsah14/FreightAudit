@@ -244,3 +244,4 @@ c:\Users\Lenovo\Desktop\Assignment\
 - **Step 10 Studio:** Interactive 1-click button to execute two independent generation passes, verify SHA-256 checksums, and download CSV/JSON/SQLite seed files.
 - **Data Dictionary Viewer:** Interactive schema documentation built right into the interface.
 - **Theme Switcher:** Seamless Dark Mode / Light Mode toggle.
+
