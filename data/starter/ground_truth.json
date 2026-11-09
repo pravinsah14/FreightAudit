@@ -1,0 +1,2002 @@
+[
+  {
+    "invoice_id": "FINV-2026-000001",
+    "shipment_id": "SHP-2026-000001",
+    "carrier_id": "CAR-000002",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000002",
+    "shipment_id": "SHP-2026-000002",
+    "carrier_id": "CAR-000009",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000003",
+    "shipment_id": "SHP-2026-000003",
+    "carrier_id": "CAR-000009",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000004",
+    "shipment_id": "SHP-2026-000004",
+    "carrier_id": "CAR-000006",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000005",
+    "shipment_id": "SHP-2026-990005",
+    "carrier_id": "CAR-000003",
+    "has_anomaly": true,
+    "anomaly_types": "UNKNOWN_SHIPMENT",
+    "expected_audit_decision": "FAILED",
+    "expected_disputed_amount": 113.09,
+    "explanation": "Invoice references unknown shipment ID SHP-2026-990005"
+  },
+  {
+    "invoice_id": "FINV-2026-000006",
+    "shipment_id": "SHP-2026-000006",
+    "carrier_id": "CAR-000002",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000007",
+    "shipment_id": "SHP-2026-000007",
+    "carrier_id": "CAR-000010",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000008",
+    "shipment_id": "SHP-2026-000008",
+    "carrier_id": "CAR-000010",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000009",
+    "shipment_id": "SHP-2026-000009",
+    "carrier_id": "CAR-000004",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000010",
+    "shipment_id": "SHP-2026-000010",
+    "carrier_id": "CAR-000002",
+    "has_anomaly": true,
+    "anomaly_types": "EXPIRED_RATE_CARD",
+    "expected_audit_decision": "FAILED",
+    "expected_disputed_amount": 132.48,
+    "explanation": "Applied expired rate schedule; variance exceeds tolerance threshold."
+  },
+  {
+    "invoice_id": "FINV-2026-000011",
+    "shipment_id": "SHP-2026-000011",
+    "carrier_id": "CAR-000005",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000012",
+    "shipment_id": "SHP-2026-000012",
+    "carrier_id": "CAR-000001",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000013",
+    "shipment_id": "SHP-2026-000013",
+    "carrier_id": "CAR-000002",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000014",
+    "shipment_id": "SHP-2026-000014",
+    "carrier_id": "CAR-000006",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000015",
+    "shipment_id": "SHP-2026-000015",
+    "carrier_id": "CAR-000007",
+    "has_anomaly": true,
+    "anomaly_types": "WEIGHT_TIER_MISAPPLIED",
+    "expected_audit_decision": "FAILED",
+    "expected_disputed_amount": 206.0,
+    "explanation": "Weight tier misapplied; scanner certified weight differs from billed weight."
+  },
+  {
+    "invoice_id": "FINV-2026-000016",
+    "shipment_id": "SHP-2026-000016",
+    "carrier_id": "CAR-000007",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000017",
+    "shipment_id": "SHP-2026-000017",
+    "carrier_id": "CAR-000005",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000018",
+    "shipment_id": "SHP-2026-000018",
+    "carrier_id": "CAR-000002",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000019",
+    "shipment_id": "SHP-2026-000019",
+    "carrier_id": "CAR-000006",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000020",
+    "shipment_id": "SHP-2026-000020",
+    "carrier_id": "CAR-000010",
+    "has_anomaly": true,
+    "anomaly_types": "DUPLICATE_SURCHARGE",
+    "expected_audit_decision": "FAILED",
+    "expected_disputed_amount": 28.06,
+    "explanation": "Duplicate surcharge entry identified during invoice line reconciliation."
+  },
+  {
+    "invoice_id": "FINV-2026-000021",
+    "shipment_id": "SHP-2026-000021",
+    "carrier_id": "CAR-000001",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000022",
+    "shipment_id": "SHP-2026-000022",
+    "carrier_id": "CAR-000004",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000023",
+    "shipment_id": "SHP-2026-000023",
+    "carrier_id": "CAR-000010",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000024",
+    "shipment_id": "SHP-2026-000024",
+    "carrier_id": "CAR-000004",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000025",
+    "shipment_id": "SHP-2026-000025",
+    "carrier_id": "CAR-000010",
+    "has_anomaly": true,
+    "anomaly_types": "CREDIT_EXCEEDS_EXCEPTION",
+    "expected_audit_decision": "FAILED",
+    "expected_disputed_amount": 100.0,
+    "explanation": "Credit note amount strictly exceeds approved exception dispute amount."
+  },
+  {
+    "invoice_id": "FINV-2026-000026",
+    "shipment_id": "SHP-2026-000026",
+    "carrier_id": "CAR-000006",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000027",
+    "shipment_id": "SHP-2026-000027",
+    "carrier_id": "CAR-000005",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000028",
+    "shipment_id": "SHP-2026-000028",
+    "carrier_id": "CAR-000007",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000029",
+    "shipment_id": "SHP-2026-000029",
+    "carrier_id": "CAR-000006",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000030",
+    "shipment_id": "SHP-2026-000025",
+    "carrier_id": "CAR-000010",
+    "has_anomaly": true,
+    "anomaly_types": "DUPLICATE_INVOICE",
+    "expected_audit_decision": "FAILED",
+    "expected_disputed_amount": 195.67,
+    "explanation": "Duplicate invoice received for shipment already settled."
+  },
+  {
+    "invoice_id": "FINV-2026-000031",
+    "shipment_id": "SHP-2026-000031",
+    "carrier_id": "CAR-000007",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000032",
+    "shipment_id": "SHP-2026-000032",
+    "carrier_id": "CAR-000008",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000033",
+    "shipment_id": "SHP-2026-000033",
+    "carrier_id": "CAR-000009",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000034",
+    "shipment_id": "SHP-2026-000034",
+    "carrier_id": "CAR-000009",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000035",
+    "shipment_id": "SHP-2026-000035",
+    "carrier_id": "CAR-000008",
+    "has_anomaly": true,
+    "anomaly_types": "UNAUTHORIZED_ACCESSORIAL",
+    "expected_audit_decision": "FAILED",
+    "expected_disputed_amount": 85.0,
+    "explanation": "Unauthorized accessorial charge lacks dispatcher pre-approval."
+  },
+  {
+    "invoice_id": "FINV-2026-000036",
+    "shipment_id": "SHP-2026-000036",
+    "carrier_id": "CAR-000005",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000037",
+    "shipment_id": "SHP-2026-000037",
+    "carrier_id": "CAR-000009",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000038",
+    "shipment_id": "SHP-2026-000038",
+    "carrier_id": "CAR-000007",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000039",
+    "shipment_id": "SHP-2026-000039",
+    "carrier_id": "CAR-000010",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000040",
+    "shipment_id": "SHP-2026-990040",
+    "carrier_id": "CAR-000002",
+    "has_anomaly": true,
+    "anomaly_types": "UNKNOWN_SHIPMENT",
+    "expected_audit_decision": "FAILED",
+    "expected_disputed_amount": 220.07,
+    "explanation": "Invoice references unknown shipment ID SHP-2026-990040"
+  },
+  {
+    "invoice_id": "FINV-2026-000041",
+    "shipment_id": "SHP-2026-000041",
+    "carrier_id": "CAR-000003",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000042",
+    "shipment_id": "SHP-2026-000042",
+    "carrier_id": "CAR-000004",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000043",
+    "shipment_id": "SHP-2026-000043",
+    "carrier_id": "CAR-000009",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000044",
+    "shipment_id": "SHP-2026-000044",
+    "carrier_id": "CAR-000006",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000045",
+    "shipment_id": "SHP-2026-000045",
+    "carrier_id": "CAR-000009",
+    "has_anomaly": true,
+    "anomaly_types": "EXPIRED_RATE_CARD",
+    "expected_audit_decision": "FAILED",
+    "expected_disputed_amount": 130.74,
+    "explanation": "Applied expired rate schedule; variance exceeds tolerance threshold."
+  },
+  {
+    "invoice_id": "FINV-2026-000046",
+    "shipment_id": "SHP-2026-000046",
+    "carrier_id": "CAR-000008",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000047",
+    "shipment_id": "SHP-2026-000047",
+    "carrier_id": "CAR-000003",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000048",
+    "shipment_id": "SHP-2026-000048",
+    "carrier_id": "CAR-000003",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000049",
+    "shipment_id": "SHP-2026-000049",
+    "carrier_id": "CAR-000007",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000050",
+    "shipment_id": "SHP-2026-000050",
+    "carrier_id": "CAR-000001",
+    "has_anomaly": true,
+    "anomaly_types": "WEIGHT_TIER_MISAPPLIED",
+    "expected_audit_decision": "FAILED",
+    "expected_disputed_amount": 49.95,
+    "explanation": "Weight tier misapplied; scanner certified weight differs from billed weight."
+  },
+  {
+    "invoice_id": "FINV-2026-000051",
+    "shipment_id": "SHP-2026-000051",
+    "carrier_id": "CAR-000002",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000052",
+    "shipment_id": "SHP-2026-000052",
+    "carrier_id": "CAR-000002",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000053",
+    "shipment_id": "SHP-2026-000053",
+    "carrier_id": "CAR-000007",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000054",
+    "shipment_id": "SHP-2026-000054",
+    "carrier_id": "CAR-000008",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000055",
+    "shipment_id": "SHP-2026-000055",
+    "carrier_id": "CAR-000002",
+    "has_anomaly": true,
+    "anomaly_types": "DUPLICATE_SURCHARGE",
+    "expected_audit_decision": "FAILED",
+    "expected_disputed_amount": 31.27,
+    "explanation": "Duplicate surcharge entry identified during invoice line reconciliation."
+  },
+  {
+    "invoice_id": "FINV-2026-000056",
+    "shipment_id": "SHP-2026-000056",
+    "carrier_id": "CAR-000009",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000057",
+    "shipment_id": "SHP-2026-000057",
+    "carrier_id": "CAR-000008",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000058",
+    "shipment_id": "SHP-2026-000058",
+    "carrier_id": "CAR-000003",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000059",
+    "shipment_id": "SHP-2026-000059",
+    "carrier_id": "CAR-000001",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000060",
+    "shipment_id": "SHP-2026-000060",
+    "carrier_id": "CAR-000006",
+    "has_anomaly": true,
+    "anomaly_types": "CREDIT_EXCEEDS_EXCEPTION",
+    "expected_audit_decision": "FAILED",
+    "expected_disputed_amount": 100.0,
+    "explanation": "Credit note amount strictly exceeds approved exception dispute amount."
+  },
+  {
+    "invoice_id": "FINV-2026-000061",
+    "shipment_id": "SHP-2026-000061",
+    "carrier_id": "CAR-000009",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000062",
+    "shipment_id": "SHP-2026-000062",
+    "carrier_id": "CAR-000008",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000063",
+    "shipment_id": "SHP-2026-000063",
+    "carrier_id": "CAR-000004",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000064",
+    "shipment_id": "SHP-2026-000064",
+    "carrier_id": "CAR-000009",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000065",
+    "shipment_id": "SHP-2026-000060",
+    "carrier_id": "CAR-000006",
+    "has_anomaly": true,
+    "anomaly_types": "DUPLICATE_INVOICE",
+    "expected_audit_decision": "FAILED",
+    "expected_disputed_amount": 628.11,
+    "explanation": "Duplicate invoice received for shipment already settled."
+  },
+  {
+    "invoice_id": "FINV-2026-000066",
+    "shipment_id": "SHP-2026-000066",
+    "carrier_id": "CAR-000005",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000067",
+    "shipment_id": "SHP-2026-000067",
+    "carrier_id": "CAR-000003",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000068",
+    "shipment_id": "SHP-2026-000068",
+    "carrier_id": "CAR-000005",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000069",
+    "shipment_id": "SHP-2026-000069",
+    "carrier_id": "CAR-000002",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000070",
+    "shipment_id": "SHP-2026-000070",
+    "carrier_id": "CAR-000009",
+    "has_anomaly": true,
+    "anomaly_types": "UNAUTHORIZED_ACCESSORIAL",
+    "expected_audit_decision": "FAILED",
+    "expected_disputed_amount": 85.0,
+    "explanation": "Unauthorized accessorial charge lacks dispatcher pre-approval."
+  },
+  {
+    "invoice_id": "FINV-2026-000071",
+    "shipment_id": "SHP-2026-000071",
+    "carrier_id": "CAR-000010",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000072",
+    "shipment_id": "SHP-2026-000072",
+    "carrier_id": "CAR-000004",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000073",
+    "shipment_id": "SHP-2026-000073",
+    "carrier_id": "CAR-000005",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000074",
+    "shipment_id": "SHP-2026-000074",
+    "carrier_id": "CAR-000001",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000075",
+    "shipment_id": "SHP-2026-990075",
+    "carrier_id": "CAR-000010",
+    "has_anomaly": true,
+    "anomaly_types": "UNKNOWN_SHIPMENT",
+    "expected_audit_decision": "FAILED",
+    "expected_disputed_amount": 752.88,
+    "explanation": "Invoice references unknown shipment ID SHP-2026-990075"
+  },
+  {
+    "invoice_id": "FINV-2026-000076",
+    "shipment_id": "SHP-2026-000076",
+    "carrier_id": "CAR-000007",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000077",
+    "shipment_id": "SHP-2026-000077",
+    "carrier_id": "CAR-000009",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000078",
+    "shipment_id": "SHP-2026-000078",
+    "carrier_id": "CAR-000003",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000079",
+    "shipment_id": "SHP-2026-000079",
+    "carrier_id": "CAR-000001",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000080",
+    "shipment_id": "SHP-2026-000080",
+    "carrier_id": "CAR-000009",
+    "has_anomaly": true,
+    "anomaly_types": "EXPIRED_RATE_CARD",
+    "expected_audit_decision": "FAILED",
+    "expected_disputed_amount": 132.97,
+    "explanation": "Applied expired rate schedule; variance exceeds tolerance threshold."
+  },
+  {
+    "invoice_id": "FINV-2026-000081",
+    "shipment_id": "SHP-2026-000081",
+    "carrier_id": "CAR-000007",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000082",
+    "shipment_id": "SHP-2026-000082",
+    "carrier_id": "CAR-000006",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000083",
+    "shipment_id": "SHP-2026-000083",
+    "carrier_id": "CAR-000004",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000084",
+    "shipment_id": "SHP-2026-000084",
+    "carrier_id": "CAR-000005",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000085",
+    "shipment_id": "SHP-2026-000085",
+    "carrier_id": "CAR-000009",
+    "has_anomaly": true,
+    "anomaly_types": "WEIGHT_TIER_MISAPPLIED",
+    "expected_audit_decision": "FAILED",
+    "expected_disputed_amount": 97.44,
+    "explanation": "Weight tier misapplied; scanner certified weight differs from billed weight."
+  },
+  {
+    "invoice_id": "FINV-2026-000086",
+    "shipment_id": "SHP-2026-000086",
+    "carrier_id": "CAR-000004",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000087",
+    "shipment_id": "SHP-2026-000087",
+    "carrier_id": "CAR-000002",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000088",
+    "shipment_id": "SHP-2026-000088",
+    "carrier_id": "CAR-000007",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000089",
+    "shipment_id": "SHP-2026-000089",
+    "carrier_id": "CAR-000003",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000090",
+    "shipment_id": "SHP-2026-000090",
+    "carrier_id": "CAR-000003",
+    "has_anomaly": true,
+    "anomaly_types": "DUPLICATE_SURCHARGE",
+    "expected_audit_decision": "FAILED",
+    "expected_disputed_amount": 42.02,
+    "explanation": "Duplicate surcharge entry identified during invoice line reconciliation."
+  },
+  {
+    "invoice_id": "FINV-2026-000091",
+    "shipment_id": "SHP-2026-000091",
+    "carrier_id": "CAR-000004",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000092",
+    "shipment_id": "SHP-2026-000092",
+    "carrier_id": "CAR-000001",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000093",
+    "shipment_id": "SHP-2026-000093",
+    "carrier_id": "CAR-000008",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000094",
+    "shipment_id": "SHP-2026-000094",
+    "carrier_id": "CAR-000001",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000095",
+    "shipment_id": "SHP-2026-000095",
+    "carrier_id": "CAR-000009",
+    "has_anomaly": true,
+    "anomaly_types": "CREDIT_EXCEEDS_EXCEPTION",
+    "expected_audit_decision": "FAILED",
+    "expected_disputed_amount": 100.0,
+    "explanation": "Credit note amount strictly exceeds approved exception dispute amount."
+  },
+  {
+    "invoice_id": "FINV-2026-000096",
+    "shipment_id": "SHP-2026-000096",
+    "carrier_id": "CAR-000001",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000097",
+    "shipment_id": "SHP-2026-000097",
+    "carrier_id": "CAR-000006",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000098",
+    "shipment_id": "SHP-2026-000098",
+    "carrier_id": "CAR-000002",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000099",
+    "shipment_id": "SHP-2026-000099",
+    "carrier_id": "CAR-000001",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000100",
+    "shipment_id": "SHP-2026-000095",
+    "carrier_id": "CAR-000009",
+    "has_anomaly": true,
+    "anomaly_types": "DUPLICATE_INVOICE",
+    "expected_audit_decision": "FAILED",
+    "expected_disputed_amount": 252.94,
+    "explanation": "Duplicate invoice received for shipment already settled."
+  },
+  {
+    "invoice_id": "FINV-2026-000101",
+    "shipment_id": "SHP-2026-000101",
+    "carrier_id": "CAR-000003",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000102",
+    "shipment_id": "SHP-2026-000102",
+    "carrier_id": "CAR-000008",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000103",
+    "shipment_id": "SHP-2026-000103",
+    "carrier_id": "CAR-000007",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000104",
+    "shipment_id": "SHP-2026-000104",
+    "carrier_id": "CAR-000002",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000105",
+    "shipment_id": "SHP-2026-000105",
+    "carrier_id": "CAR-000002",
+    "has_anomaly": true,
+    "anomaly_types": "UNAUTHORIZED_ACCESSORIAL",
+    "expected_audit_decision": "FAILED",
+    "expected_disputed_amount": 85.0,
+    "explanation": "Unauthorized accessorial charge lacks dispatcher pre-approval."
+  },
+  {
+    "invoice_id": "FINV-2026-000106",
+    "shipment_id": "SHP-2026-000106",
+    "carrier_id": "CAR-000006",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000107",
+    "shipment_id": "SHP-2026-000107",
+    "carrier_id": "CAR-000004",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000108",
+    "shipment_id": "SHP-2026-000108",
+    "carrier_id": "CAR-000006",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000109",
+    "shipment_id": "SHP-2026-000109",
+    "carrier_id": "CAR-000007",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000110",
+    "shipment_id": "SHP-2026-990110",
+    "carrier_id": "CAR-000002",
+    "has_anomaly": true,
+    "anomaly_types": "UNKNOWN_SHIPMENT",
+    "expected_audit_decision": "FAILED",
+    "expected_disputed_amount": 359.94,
+    "explanation": "Invoice references unknown shipment ID SHP-2026-990110"
+  },
+  {
+    "invoice_id": "FINV-2026-000111",
+    "shipment_id": "SHP-2026-000111",
+    "carrier_id": "CAR-000006",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000112",
+    "shipment_id": "SHP-2026-000112",
+    "carrier_id": "CAR-000005",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000113",
+    "shipment_id": "SHP-2026-000113",
+    "carrier_id": "CAR-000007",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000114",
+    "shipment_id": "SHP-2026-000114",
+    "carrier_id": "CAR-000002",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000115",
+    "shipment_id": "SHP-2026-000115",
+    "carrier_id": "CAR-000009",
+    "has_anomaly": true,
+    "anomaly_types": "EXPIRED_RATE_CARD",
+    "expected_audit_decision": "FAILED",
+    "expected_disputed_amount": 135.77,
+    "explanation": "Applied expired rate schedule; variance exceeds tolerance threshold."
+  },
+  {
+    "invoice_id": "FINV-2026-000116",
+    "shipment_id": "SHP-2026-000116",
+    "carrier_id": "CAR-000008",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000117",
+    "shipment_id": "SHP-2026-000117",
+    "carrier_id": "CAR-000008",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000118",
+    "shipment_id": "SHP-2026-000118",
+    "carrier_id": "CAR-000010",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000119",
+    "shipment_id": "SHP-2026-000119",
+    "carrier_id": "CAR-000005",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000120",
+    "shipment_id": "SHP-2026-000120",
+    "carrier_id": "CAR-000003",
+    "has_anomaly": true,
+    "anomaly_types": "WEIGHT_TIER_MISAPPLIED",
+    "expected_audit_decision": "FAILED",
+    "expected_disputed_amount": 231.97,
+    "explanation": "Weight tier misapplied; scanner certified weight differs from billed weight."
+  },
+  {
+    "invoice_id": "FINV-2026-000121",
+    "shipment_id": "SHP-2026-000121",
+    "carrier_id": "CAR-000007",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000122",
+    "shipment_id": "SHP-2026-000122",
+    "carrier_id": "CAR-000004",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000123",
+    "shipment_id": "SHP-2026-000123",
+    "carrier_id": "CAR-000007",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000124",
+    "shipment_id": "SHP-2026-000124",
+    "carrier_id": "CAR-000001",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000125",
+    "shipment_id": "SHP-2026-000125",
+    "carrier_id": "CAR-000003",
+    "has_anomaly": true,
+    "anomaly_types": "DUPLICATE_SURCHARGE",
+    "expected_audit_decision": "FAILED",
+    "expected_disputed_amount": 22.22,
+    "explanation": "Duplicate surcharge entry identified during invoice line reconciliation."
+  },
+  {
+    "invoice_id": "FINV-2026-000126",
+    "shipment_id": "SHP-2026-000126",
+    "carrier_id": "CAR-000004",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000127",
+    "shipment_id": "SHP-2026-000127",
+    "carrier_id": "CAR-000003",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000128",
+    "shipment_id": "SHP-2026-000128",
+    "carrier_id": "CAR-000009",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000129",
+    "shipment_id": "SHP-2026-000129",
+    "carrier_id": "CAR-000009",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000130",
+    "shipment_id": "SHP-2026-000130",
+    "carrier_id": "CAR-000003",
+    "has_anomaly": true,
+    "anomaly_types": "CREDIT_EXCEEDS_EXCEPTION",
+    "expected_audit_decision": "FAILED",
+    "expected_disputed_amount": 100.0,
+    "explanation": "Credit note amount strictly exceeds approved exception dispute amount."
+  },
+  {
+    "invoice_id": "FINV-2026-000131",
+    "shipment_id": "SHP-2026-000131",
+    "carrier_id": "CAR-000009",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000132",
+    "shipment_id": "SHP-2026-000132",
+    "carrier_id": "CAR-000009",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000133",
+    "shipment_id": "SHP-2026-000133",
+    "carrier_id": "CAR-000004",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000134",
+    "shipment_id": "SHP-2026-000134",
+    "carrier_id": "CAR-000008",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000135",
+    "shipment_id": "SHP-2026-000130",
+    "carrier_id": "CAR-000003",
+    "has_anomaly": true,
+    "anomaly_types": "DUPLICATE_INVOICE",
+    "expected_audit_decision": "FAILED",
+    "expected_disputed_amount": 224.65,
+    "explanation": "Duplicate invoice received for shipment already settled."
+  },
+  {
+    "invoice_id": "FINV-2026-000136",
+    "shipment_id": "SHP-2026-000136",
+    "carrier_id": "CAR-000004",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000137",
+    "shipment_id": "SHP-2026-000137",
+    "carrier_id": "CAR-000008",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000138",
+    "shipment_id": "SHP-2026-000138",
+    "carrier_id": "CAR-000009",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000139",
+    "shipment_id": "SHP-2026-000139",
+    "carrier_id": "CAR-000003",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000140",
+    "shipment_id": "SHP-2026-000140",
+    "carrier_id": "CAR-000008",
+    "has_anomaly": true,
+    "anomaly_types": "UNAUTHORIZED_ACCESSORIAL",
+    "expected_audit_decision": "FAILED",
+    "expected_disputed_amount": 85.0,
+    "explanation": "Unauthorized accessorial charge lacks dispatcher pre-approval."
+  },
+  {
+    "invoice_id": "FINV-2026-000141",
+    "shipment_id": "SHP-2026-000141",
+    "carrier_id": "CAR-000008",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000142",
+    "shipment_id": "SHP-2026-000142",
+    "carrier_id": "CAR-000006",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000143",
+    "shipment_id": "SHP-2026-000143",
+    "carrier_id": "CAR-000001",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000144",
+    "shipment_id": "SHP-2026-000144",
+    "carrier_id": "CAR-000008",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000145",
+    "shipment_id": "SHP-2026-990145",
+    "carrier_id": "CAR-000006",
+    "has_anomaly": true,
+    "anomaly_types": "UNKNOWN_SHIPMENT",
+    "expected_audit_decision": "FAILED",
+    "expected_disputed_amount": 355.47,
+    "explanation": "Invoice references unknown shipment ID SHP-2026-990145"
+  },
+  {
+    "invoice_id": "FINV-2026-000146",
+    "shipment_id": "SHP-2026-000146",
+    "carrier_id": "CAR-000008",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000147",
+    "shipment_id": "SHP-2026-000147",
+    "carrier_id": "CAR-000002",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000148",
+    "shipment_id": "SHP-2026-000148",
+    "carrier_id": "CAR-000005",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000149",
+    "shipment_id": "SHP-2026-000149",
+    "carrier_id": "CAR-000001",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000150",
+    "shipment_id": "SHP-2026-000150",
+    "carrier_id": "CAR-000006",
+    "has_anomaly": true,
+    "anomaly_types": "EXPIRED_RATE_CARD",
+    "expected_audit_decision": "FAILED",
+    "expected_disputed_amount": 133.01,
+    "explanation": "Applied expired rate schedule; variance exceeds tolerance threshold."
+  },
+  {
+    "invoice_id": "FINV-2026-000151",
+    "shipment_id": "SHP-2026-000151",
+    "carrier_id": "CAR-000009",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000152",
+    "shipment_id": "SHP-2026-000152",
+    "carrier_id": "CAR-000004",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000153",
+    "shipment_id": "SHP-2026-000153",
+    "carrier_id": "CAR-000003",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000154",
+    "shipment_id": "SHP-2026-000154",
+    "carrier_id": "CAR-000003",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000155",
+    "shipment_id": "SHP-2026-000155",
+    "carrier_id": "CAR-000004",
+    "has_anomaly": true,
+    "anomaly_types": "WEIGHT_TIER_MISAPPLIED",
+    "expected_audit_decision": "FAILED",
+    "expected_disputed_amount": 96.59,
+    "explanation": "Weight tier misapplied; scanner certified weight differs from billed weight."
+  },
+  {
+    "invoice_id": "FINV-2026-000156",
+    "shipment_id": "SHP-2026-000156",
+    "carrier_id": "CAR-000007",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000157",
+    "shipment_id": "SHP-2026-000157",
+    "carrier_id": "CAR-000007",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000158",
+    "shipment_id": "SHP-2026-000158",
+    "carrier_id": "CAR-000008",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000159",
+    "shipment_id": "SHP-2026-000159",
+    "carrier_id": "CAR-000002",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000160",
+    "shipment_id": "SHP-2026-000160",
+    "carrier_id": "CAR-000002",
+    "has_anomaly": true,
+    "anomaly_types": "DUPLICATE_SURCHARGE",
+    "expected_audit_decision": "FAILED",
+    "expected_disputed_amount": 9.32,
+    "explanation": "Duplicate surcharge entry identified during invoice line reconciliation."
+  },
+  {
+    "invoice_id": "FINV-2026-000161",
+    "shipment_id": "SHP-2026-000161",
+    "carrier_id": "CAR-000002",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000162",
+    "shipment_id": "SHP-2026-000162",
+    "carrier_id": "CAR-000009",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000163",
+    "shipment_id": "SHP-2026-000163",
+    "carrier_id": "CAR-000004",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000164",
+    "shipment_id": "SHP-2026-000164",
+    "carrier_id": "CAR-000003",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000165",
+    "shipment_id": "SHP-2026-000165",
+    "carrier_id": "CAR-000005",
+    "has_anomaly": true,
+    "anomaly_types": "CREDIT_EXCEEDS_EXCEPTION",
+    "expected_audit_decision": "FAILED",
+    "expected_disputed_amount": 100.0,
+    "explanation": "Credit note amount strictly exceeds approved exception dispute amount."
+  },
+  {
+    "invoice_id": "FINV-2026-000166",
+    "shipment_id": "SHP-2026-000166",
+    "carrier_id": "CAR-000009",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000167",
+    "shipment_id": "SHP-2026-000167",
+    "carrier_id": "CAR-000008",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000168",
+    "shipment_id": "SHP-2026-000168",
+    "carrier_id": "CAR-000006",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000169",
+    "shipment_id": "SHP-2026-000169",
+    "carrier_id": "CAR-000002",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000170",
+    "shipment_id": "SHP-2026-000165",
+    "carrier_id": "CAR-000005",
+    "has_anomaly": true,
+    "anomaly_types": "DUPLICATE_INVOICE",
+    "expected_audit_decision": "FAILED",
+    "expected_disputed_amount": 541.31,
+    "explanation": "Duplicate invoice received for shipment already settled."
+  },
+  {
+    "invoice_id": "FINV-2026-000171",
+    "shipment_id": "SHP-2026-000171",
+    "carrier_id": "CAR-000009",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000172",
+    "shipment_id": "SHP-2026-000172",
+    "carrier_id": "CAR-000004",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000173",
+    "shipment_id": "SHP-2026-000173",
+    "carrier_id": "CAR-000006",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000174",
+    "shipment_id": "SHP-2026-000174",
+    "carrier_id": "CAR-000008",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000175",
+    "shipment_id": "SHP-2026-000175",
+    "carrier_id": "CAR-000001",
+    "has_anomaly": true,
+    "anomaly_types": "UNAUTHORIZED_ACCESSORIAL",
+    "expected_audit_decision": "FAILED",
+    "expected_disputed_amount": 85.0,
+    "explanation": "Unauthorized accessorial charge lacks dispatcher pre-approval."
+  },
+  {
+    "invoice_id": "FINV-2026-000176",
+    "shipment_id": "SHP-2026-000176",
+    "carrier_id": "CAR-000008",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000177",
+    "shipment_id": "SHP-2026-000177",
+    "carrier_id": "CAR-000010",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000178",
+    "shipment_id": "SHP-2026-000178",
+    "carrier_id": "CAR-000003",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000179",
+    "shipment_id": "SHP-2026-000179",
+    "carrier_id": "CAR-000004",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000180",
+    "shipment_id": "SHP-2026-990180",
+    "carrier_id": "CAR-000008",
+    "has_anomaly": true,
+    "anomaly_types": "UNKNOWN_SHIPMENT",
+    "expected_audit_decision": "FAILED",
+    "expected_disputed_amount": 586.71,
+    "explanation": "Invoice references unknown shipment ID SHP-2026-990180"
+  },
+  {
+    "invoice_id": "FINV-2026-000181",
+    "shipment_id": "SHP-2026-000181",
+    "carrier_id": "CAR-000007",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000182",
+    "shipment_id": "SHP-2026-000182",
+    "carrier_id": "CAR-000006",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000183",
+    "shipment_id": "SHP-2026-000183",
+    "carrier_id": "CAR-000007",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000184",
+    "shipment_id": "SHP-2026-000184",
+    "carrier_id": "CAR-000002",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000185",
+    "shipment_id": "SHP-2026-000185",
+    "carrier_id": "CAR-000005",
+    "has_anomaly": true,
+    "anomaly_types": "EXPIRED_RATE_CARD",
+    "expected_audit_decision": "FAILED",
+    "expected_disputed_amount": 133.63,
+    "explanation": "Applied expired rate schedule; variance exceeds tolerance threshold."
+  },
+  {
+    "invoice_id": "FINV-2026-000186",
+    "shipment_id": "SHP-2026-000186",
+    "carrier_id": "CAR-000006",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000187",
+    "shipment_id": "SHP-2026-000187",
+    "carrier_id": "CAR-000002",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000188",
+    "shipment_id": "SHP-2026-000188",
+    "carrier_id": "CAR-000004",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000189",
+    "shipment_id": "SHP-2026-000189",
+    "carrier_id": "CAR-000006",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000190",
+    "shipment_id": "SHP-2026-000190",
+    "carrier_id": "CAR-000007",
+    "has_anomaly": true,
+    "anomaly_types": "WEIGHT_TIER_MISAPPLIED",
+    "expected_audit_decision": "FAILED",
+    "expected_disputed_amount": 75.33,
+    "explanation": "Weight tier misapplied; scanner certified weight differs from billed weight."
+  },
+  {
+    "invoice_id": "FINV-2026-000191",
+    "shipment_id": "SHP-2026-000191",
+    "carrier_id": "CAR-000007",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000192",
+    "shipment_id": "SHP-2026-000192",
+    "carrier_id": "CAR-000007",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000193",
+    "shipment_id": "SHP-2026-000193",
+    "carrier_id": "CAR-000007",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000194",
+    "shipment_id": "SHP-2026-000194",
+    "carrier_id": "CAR-000003",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000195",
+    "shipment_id": "SHP-2026-000195",
+    "carrier_id": "CAR-000010",
+    "has_anomaly": true,
+    "anomaly_types": "DUPLICATE_SURCHARGE",
+    "expected_audit_decision": "FAILED",
+    "expected_disputed_amount": 51.14,
+    "explanation": "Duplicate surcharge entry identified during invoice line reconciliation."
+  },
+  {
+    "invoice_id": "FINV-2026-000196",
+    "shipment_id": "SHP-2026-000196",
+    "carrier_id": "CAR-000007",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000197",
+    "shipment_id": "SHP-2026-000197",
+    "carrier_id": "CAR-000006",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000198",
+    "shipment_id": "SHP-2026-000198",
+    "carrier_id": "CAR-000003",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000199",
+    "shipment_id": "SHP-2026-000199",
+    "carrier_id": "CAR-000007",
+    "has_anomaly": false,
+    "anomaly_types": "NONE",
+    "expected_audit_decision": "PASSED",
+    "expected_disputed_amount": 0.0,
+    "explanation": "Fully reconciled and compliant."
+  },
+  {
+    "invoice_id": "FINV-2026-000200",
+    "shipment_id": "SHP-2026-000200",
+    "carrier_id": "CAR-000004",
+    "has_anomaly": true,
+    "anomaly_types": "CREDIT_EXCEEDS_EXCEPTION",
+    "expected_audit_decision": "FAILED",
+    "expected_disputed_amount": 100.0,
+    "explanation": "Credit note amount strictly exceeds approved exception dispute amount."
+  }
+]

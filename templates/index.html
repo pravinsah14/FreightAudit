@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FreightAudit AI - Enterprise Freight Invoice Audit & Reconciliation</title>
+  
+  <!-- Inter Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['class', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              900: '#1e3a8a',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body class="min-h-screen flex flex-col bg-[#0b0f19] text-gray-100 antialiased selection:bg-blue-600 selection:text-white">
+
+  <!-- TOP HEADER / NAV -->
+  <header class="sticky top-0 z-40 w-full glass-panel border-b border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      
+      <!-- Brand & Title -->
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-600 flex items-center justify-center shadow-lg shadow-blue-500/20 text-white font-extrabold text-lg tracking-wider">
+          FA
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <h1 class="font-bold text-base tracking-tight text-white">FreightAudit<span class="text-blue-500">.AI</span></h1>
+            <span class="px-2 py-0.5 rounded-full text-[10px] font-semibold bg-blue-500/10 text-blue-400 border border-blue-500/20">v1.0 Production</span>
+          </div>
+          <p class="text-[11px] text-gray-400">Automated 3-Way Match & Contract Discrepancy Reconciliation</p>
+        </div>
+      </div>
+
+      <!-- Navigation Tabs -->
+      <nav class="hidden md:flex items-center space-x-1 bg-gray-900/60 p-1 rounded-xl border border-gray-800">
+        <button data-tab-target="dashboard" class="px-3.5 py-1.5 rounded-lg text-xs font-medium transition-all text-white bg-blue-600 shadow-sm nav-active">
+          Dashboard
+        </button>
+        <button data-tab-target="invoices" class="px-3.5 py-1.5 rounded-lg text-xs font-medium text-gray-400 hover:text-white transition-all">
+          Invoices Workbench
+        </button>
+        <button data-tab-target="exceptions" class="px-3.5 py-1.5 rounded-lg text-xs font-medium text-gray-400 hover:text-white transition-all flex items-center gap-1.5">
+          Exceptions
+          <span class="px-1.5 py-0.2 rounded-full text-[10px] bg-red-500/20 text-red-400 font-bold" id="nav-ex-badge">40</span>
+        </button>
+        <button data-tab-target="credit-notes" class="px-3.5 py-1.5 rounded-lg text-xs font-medium text-gray-400 hover:text-white transition-all">
+          Credit Notes
+        </button>
+        <button data-tab-target="benchmark" class="px-3.5 py-1.5 rounded-lg text-xs font-medium text-gray-400 hover:text-white transition-all">
+          Benchmark & Ground Truth
+        </button>
+        <button data-tab-target="generator" class="px-3.5 py-1.5 rounded-lg text-xs font-medium text-gray-400 hover:text-white transition-all">
+          Step 10 Studio
+        </button>
+        <button data-tab-target="dictionary" class="px-3.5 py-1.5 rounded-lg text-xs font-medium text-gray-400 hover:text-white transition-all">
+          Data Dictionary
+        </button>
+      </nav>
+
+      <!-- Right controls (Theme + Status) -->
+      <div class="flex items-center gap-3">
+        <div class="hidden lg:flex items-center gap-2 px-3 py-1 bg-gray-900 border border-gray-800 rounded-lg text-xs">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span class="text-gray-400 font-mono text-[11px]">Seed: <strong class="text-gray-200">20261022</strong></span>
+        </div>
+
+        <button id="theme-toggle" class="p-2 rounded-lg bg-gray-800 hover:bg-gray-700 text-gray-300 border border-gray-700 transition-colors" title="Toggle theme">
+          <svg id="theme-icon" class="w-4 h-4 stroke-current fill-none stroke-2" viewBox="0 0 24 24">
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT AREA -->
+  <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">
+
+    <!-- ==================== TAB 1: DASHBOARD ==================== -->
+    <section id="tab-dashboard" class="tab-section space-y-6 fade-in">
+      
+      <!-- Top Row KPI Stat Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        
+        <!-- Total Invoices Card -->
+        <div class="glass-panel p-5 rounded-2xl border border-gray-800 kpi-card flex flex-col justify-between">
+          <div class="flex items-center justify-between text-gray-400 text-xs font-medium">
+            <span>TOTAL AUDITED</span>
+            <span class="badge badge-success" id="kpi-pass-rate">80.0% Pass</span>
+          </div>
+          <div class="mt-2">
+            <div class="text-3xl font-extrabold text-white tracking-tight" id="kpi-total-invoices">200</div>
+            <div class="text-xs text-gray-400 mt-1 flex items-center gap-1.5">
+              <span>Automated 3-Way Verified</span>
+            </div>
+          </div>
+          <div class="mt-4 pt-3 border-t border-gray-800/60 text-[11px] text-gray-400 flex justify-between">
+            <span>Clean Invoices: <strong class="text-emerald-400">160</strong></span>
+            <span>Flagged: <strong class="text-red-400">40</strong></span>
+          </div>
+        </div>
+
+        <!-- Billed Spend Card -->
+        <div class="glass-panel p-5 rounded-2xl border border-gray-800 kpi-card flex flex-col justify-between">
+          <div class="flex items-center justify-between text-gray-400 text-xs font-medium">
+            <span>TOTAL BILLED SPEND</span>
+            <span class="badge badge-neutral">USD</span>
+          </div>
+          <div class="mt-2">
+            <div class="text-3xl font-extrabold text-white tracking-tight" id="kpi-billed-amount">$70,628.65</div>
+            <div class="text-xs text-gray-400 mt-1">Gross Freight & Accessorials</div>
+          </div>
+          <div class="mt-4 pt-3 border-t border-gray-800/60 text-[11px] text-gray-400 flex justify-between">
+            <span>Expected Contract: <strong class="text-gray-200">$65,475.58</strong></span>
+          </div>
+        </div>
+
+        <!-- Overcharge Disputed Card -->
+        <div class="glass-panel p-5 rounded-2xl border border-gray-800 kpi-card flex flex-col justify-between border-l-4 border-l-red-500">
+          <div class="flex items-center justify-between text-gray-400 text-xs font-medium">
+            <span>OVERCHARGES CAUGHT</span>
+            <span class="badge badge-danger" id="kpi-savings-pct">7.3% of spend</span>
+          </div>
+          <div class="mt-2">
+            <div class="text-3xl font-extrabold text-red-400 tracking-tight" id="kpi-overcharge">$5,153.07</div>
+            <div class="text-xs text-gray-400 mt-1">Disputed Variance Recovery</div>
+          </div>
+          <div class="mt-4 pt-3 border-t border-gray-800/60 text-[11px] text-gray-400 flex justify-between">
+            <span>Zero False Positives</span>
+            <span class="text-emerald-400 font-semibold">100% Precision</span>
+          </div>
+        </div>
+
+        <!-- Recovered via Credits Card -->
+        <div class="glass-panel p-5 rounded-2xl border border-gray-800 kpi-card flex flex-col justify-between border-l-4 border-l-purple-500">
+          <div class="flex items-center justify-between text-gray-400 text-xs font-medium">
+            <span>RECONCILED CREDITS</span>
+            <span class="badge badge-purple">Step 5 Verified</span>
+          </div>
+          <div class="mt-2">
+            <div class="text-3xl font-extrabold text-purple-400 tracking-tight" id="kpi-credits-total">$1,450.00</div>
+            <div class="text-xs text-gray-400 mt-1">Credit Notes Settled / Tracked</div>
+          </div>
+          <div class="mt-4 pt-3 border-t border-gray-800/60 text-[11px] text-gray-400 flex justify-between">
+            <span>Open Exceptions: <strong class="text-amber-400" id="kpi-open-exceptions">34</strong></span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Middle Charts Row -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        
+        <!-- Doughnut: Exceptions Breakdown -->
+        <div class="lg:col-span-5 glass-panel p-5 rounded-2xl border border-gray-800 space-y-4">
+          <div class="flex items-center justify-between">
+            <div>
+              <h2 class="text-sm font-bold text-white tracking-tight">Audit Exceptions Breakdown</h2>
+              <p class="text-xs text-gray-400">Distribution of rule violations and overcharge classes</p>
+            </div>
+            <span class="badge badge-neutral">40 Anomalies</span>
+          </div>
+          <div class="relative h-64 w-full">
+            <canvas id="chart-exceptions"></canvas>
+          </div>
+        </div>
+
+        <!-- Horizontal Bar: Carrier Compliance Scorecard -->
+        <div class="lg:col-span-7 glass-panel p-5 rounded-2xl border border-gray-800 space-y-4">
+          <div class="flex items-center justify-between">
+            <div>
+              <h2 class="text-sm font-bold text-white tracking-tight">Carrier Compliance Scorecards</h2>
+              <p class="text-xs text-gray-400">Invoice accuracy rating & error frequency across active carriers</p>
+            </div>
+            <span class="text-xs text-blue-400 hover:underline cursor-pointer" onclick="switchTab('invoices')">View All &rarr;</span>
+          </div>
+          <div class="relative h-64 w-full">
+            <canvas id="chart-carrier-compliance"></canvas>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Edge Cases & Validation Matrix Card -->
+      <div class="glass-panel p-5 rounded-2xl border border-gray-800 space-y-4">
+        <div class="flex items-center justify-between">
+          <div>
+            <h2 class="text-sm font-bold text-white tracking-tight">Challenge Negative Scenarios & Rule Coverage</h2>
+            <p class="text-xs text-gray-400">Every explicitly requested edge case is generated, audited, and benchmarked against ground truth</p>
+          </div>
+          <span class="badge badge-success">5 of 5 Required Edge Cases Verified</span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-3 text-xs">
+          <div class="p-3 bg-gray-900/80 rounded-xl border border-gray-800 space-y-1">
+            <div class="font-bold text-red-400 flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-red-400"></span> 1. Unknown Shipment
+            </div>
+            <p class="text-gray-400 text-[11px]">Orphan invoice referencing non-existent shipment ID rejected by 3-way match.</p>
+          </div>
+          <div class="p-3 bg-gray-900/80 rounded-xl border border-gray-800 space-y-1">
+            <div class="font-bold text-amber-400 flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-amber-400"></span> 2. Expired Rate Card
+            </div>
+            <p class="text-gray-400 text-[11px]">Shipment date occurred after contract expiry; flagged against obsolete rate card.</p>
+          </div>
+          <div class="p-3 bg-gray-900/80 rounded-xl border border-gray-800 space-y-1">
+            <div class="font-bold text-blue-400 flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-blue-400"></span> 3. Weight Misapplied
+            </div>
+            <p class="text-gray-400 text-[11px]">Billed weight audited against certified scanner volumetric weight (L*W*H/5000).</p>
+          </div>
+          <div class="p-3 bg-gray-900/80 rounded-xl border border-gray-800 space-y-1">
+            <div class="font-bold text-purple-400 flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-purple-400"></span> 4. Duplicate Surcharge
+            </div>
+            <p class="text-gray-400 text-[11px]">Duplicate fuel surcharge or repeated accessorial detected on single bill.</p>
+          </div>
+          <div class="p-3 bg-gray-900/80 rounded-xl border border-gray-800 space-y-1">
+            <div class="font-bold text-emerald-400 flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span> 5. Credit Exceeds Dispute
+            </div>
+            <p class="text-gray-400 text-[11px]">Reconciliation catches credit note amount strictly exceeding approved dispute.</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- ==================== TAB 2: INVOICES WORKBENCH ==================== -->
+    <section id="tab-invoices" class="tab-section hidden space-y-4 fade-in">
+      
+      <!-- Filter Bar -->
+      <div class="glass-panel p-4 rounded-2xl border border-gray-800 flex flex-wrap items-center justify-between gap-4">
+        <div class="flex items-center gap-3 flex-1 min-w-[280px]">
+          <div class="relative w-full max-w-md">
+            <input type="text" id="search-invoices" placeholder="Search by Invoice ID, Carrier, Shipment ID..." 
+                   class="w-full bg-gray-900 border border-gray-700 rounded-xl px-3.5 py-2 text-xs text-gray-200 placeholder-gray-500 focus:outline-none focus:border-blue-500">
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <select id="filter-invoice-status" class="bg-gray-900 border border-gray-700 rounded-xl px-3 py-2 text-xs text-gray-200 focus:outline-none focus:border-blue-500">
+            <option value="ALL">All Audit Statuses</option>
+            <option value="PASSED">Passed (Clean)</option>
+            <option value="FAILED">Failed (Disputed)</option>
+            <option value="DISPUTED">Disputed Workflow</option>
+            <option value="APPROVED">Approved Workflow</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Invoices Data Table -->
+      <div class="glass-panel rounded-2xl border border-gray-800 overflow-hidden shadow-xl">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left audit-table">
+            <thead>
+              <tr class="bg-gray-900/60">
+                <th>Invoice ID</th>
+                <th>Carrier & Mode</th>
+                <th>Shipment ID</th>
+                <th>Issue Date</th>
+                <th>Billed Total</th>
+                <th>Expected</th>
+                <th>Variance</th>
+                <th>Audit Status</th>
+                <th class="text-right">Action</th>
+              </tr>
+            </thead>
+            <tbody id="invoices-table-body" class="divide-y divide-gray-800">
+              <!-- Rendered via JavaScript -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- ==================== TAB 3: EXCEPTIONS QUEUE ==================== -->
+    <section id="tab-exceptions" class="tab-section hidden space-y-4 fade-in">
+      
+      <!-- Filter Controls -->
+      <div class="glass-panel p-4 rounded-2xl border border-gray-800 flex flex-wrap items-center justify-between gap-4">
+        <div>
+          <h2 class="text-base font-bold text-white tracking-tight">Active Audit Exception Queue</h2>
+          <p class="text-xs text-gray-400">Review discrepancies, approve disputes, and trigger recovery credit adjustments</p>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <select id="filter-exception-type" class="bg-gray-900 border border-gray-700 rounded-xl px-3 py-2 text-xs text-gray-200 focus:outline-none">
+            <option value="ALL">All Exception Types</option>
+            <option value="UNKNOWN_SHIPMENT">Unknown Shipment</option>
+            <option value="EXPIRED_RATE_CARD">Expired Rate Card</option>
+            <option value="WEIGHT_TIER_MISAPPLIED">Weight Tier Misapplied</option>
+            <option value="DUPLICATE_SURCHARGE">Duplicate Surcharge</option>
+            <option value="DUPLICATE_INVOICE">Duplicate Invoice</option>
+            <option value="UNAUTHORIZED_ACCESSORIAL">Unauthorized Accessorial</option>
+            <option value="CREDIT_EXCEEDS_EXCEPTION">Credit Exceeds Dispute</option>
+          </select>
+
+          <select id="filter-exception-severity" class="bg-gray-900 border border-gray-700 rounded-xl px-3 py-2 text-xs text-gray-200 focus:outline-none">
+            <option value="ALL">All Severities</option>
+            <option value="CRITICAL">Critical</option>
+            <option value="HIGH">High</option>
+            <option value="MEDIUM">Medium</option>
+            <option value="LOW">Low</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Exceptions List Container -->
+      <div id="exceptions-list" class="space-y-3">
+        <!-- Rendered dynamically -->
+      </div>
+
+    </section>
+
+
+    <!-- ==================== TAB 4: CREDIT NOTES ==================== -->
+    <section id="tab-credit-notes" class="tab-section hidden space-y-4 fade-in">
+      <div class="glass-panel p-5 rounded-2xl border border-gray-800">
+        <h2 class="text-base font-bold text-white tracking-tight">Credit Note Settlement Ledger</h2>
+        <p class="text-xs text-gray-400 mt-1">Reconciled recovery adjustments issued by carriers for approved overcharge disputes</p>
+      </div>
+
+      <div class="glass-panel rounded-2xl border border-gray-800 overflow-hidden shadow-xl">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left audit-table">
+            <thead>
+              <tr class="bg-gray-900/60">
+                <th>Credit Note ID</th>
+                <th>Credit Note #</th>
+                <th>Carrier</th>
+                <th>Original Invoice</th>
+                <th>Credit Amount</th>
+                <th>Status</th>
+                <th>Issue Date</th>
+              </tr>
+            </thead>
+            <tbody id="credit-notes-tbody" class="divide-y divide-gray-800">
+              <!-- Rendered dynamically -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==================== TAB 5: BENCHMARK & GROUND TRUTH ==================== -->
+    <section id="tab-benchmark" class="tab-section hidden space-y-6 fade-in">
+      
+      <div class="glass-panel p-5 rounded-2xl border border-gray-800 space-y-2">
+        <div class="flex items-center justify-between">
+          <div>
+            <h2 class="text-lg font-bold text-white tracking-tight">Ground Truth Benchmark & Evaluation Metrics</h2>
+            <p class="text-xs text-gray-400">Step 7 & Evaluation Focus: Independent evaluation against separate <code>ground_truth.json</code> without input feature leakage</p>
+          </div>
+          <span class="badge badge-success">Zero Leakage Enforced</span>
+        </div>
+      </div>
+
+      <!-- Benchmark Metric Cards -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="glass-panel p-5 rounded-2xl border border-gray-800 text-center">
+          <div class="text-xs text-gray-400 font-medium uppercase">ACCURACY</div>
+          <div class="text-3xl font-extrabold text-blue-400 mt-1" id="bench-accuracy">100.00%</div>
+          <div class="text-[11px] text-gray-500 mt-1">Overall correctness</div>
+        </div>
+        <div class="glass-panel p-5 rounded-2xl border border-gray-800 text-center">
+          <div class="text-xs text-gray-400 font-medium uppercase">PRECISION</div>
+          <div class="text-3xl font-extrabold text-emerald-400 mt-1" id="bench-precision">100.00%</div>
+          <div class="text-[11px] text-gray-500 mt-1">Zero false disputes</div>
+        </div>
+        <div class="glass-panel p-5 rounded-2xl border border-gray-800 text-center">
+          <div class="text-xs text-gray-400 font-medium uppercase">RECALL</div>
+          <div class="text-3xl font-extrabold text-purple-400 mt-1" id="bench-recall">100.00%</div>
+          <div class="text-[11px] text-gray-500 mt-1">100% anomalies caught</div>
+        </div>
+        <div class="glass-panel p-5 rounded-2xl border border-gray-800 text-center">
+          <div class="text-xs text-gray-400 font-medium uppercase">F1-SCORE</div>
+          <div class="text-3xl font-extrabold text-amber-400 mt-1" id="bench-f1">100.00%</div>
+          <div class="text-[11px] text-gray-500 mt-1">Harmonic mean score</div>
+        </div>
+      </div>
+
+      <!-- Confusion Matrix Grid -->
+      <div class="glass-panel p-6 rounded-2xl border border-gray-800 max-w-2xl mx-auto space-y-4">
+        <h3 class="text-sm font-bold text-white text-center">Confusion Matrix (Anomaly vs Clean Decision)</h3>
+        
+        <div class="grid grid-cols-2 gap-4">
+          <div class="p-5 bg-emerald-950/40 border border-emerald-800/40 rounded-xl text-center">
+            <div class="text-xs text-emerald-400 font-semibold uppercase">True Positives (TP)</div>
+            <div class="text-4xl font-extrabold text-emerald-300 mt-2" id="cm-tp">40</div>
+            <div class="text-[11px] text-gray-400 mt-1">Overcharges correctly caught</div>
+          </div>
+
+          <div class="p-5 bg-red-950/20 border border-red-800/20 rounded-xl text-center">
+            <div class="text-xs text-red-400 font-semibold uppercase">False Positives (FP)</div>
+            <div class="text-4xl font-extrabold text-gray-400 mt-2" id="cm-fp">0</div>
+            <div class="text-[11px] text-gray-500 mt-1">Clean bills falsely flagged</div>
+          </div>
+
+          <div class="p-5 bg-blue-950/20 border border-blue-800/20 rounded-xl text-center">
+            <div class="text-xs text-blue-400 font-semibold uppercase">False Negatives (FN)</div>
+            <div class="text-4xl font-extrabold text-gray-400 mt-2" id="cm-fn">0</div>
+            <div class="text-[11px] text-gray-500 mt-1">Overcharges missed</div>
+          </div>
+
+          <div class="p-5 bg-gray-900 border border-gray-800 rounded-xl text-center">
+            <div class="text-xs text-gray-300 font-semibold uppercase">True Negatives (TN)</div>
+            <div class="text-4xl font-extrabold text-gray-200 mt-2" id="cm-tn">160</div>
+            <div class="text-[11px] text-gray-400 mt-1">Clean bills correctly approved</div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- ==================== TAB 6: STEP 10 REPRODUCIBILITY STUDIO ==================== -->
+    <section id="tab-generator" class="tab-section hidden space-y-6 fade-in">
+      
+      <div class="glass-panel p-6 rounded-2xl border border-gray-800 space-y-4">
+        <div>
+          <h2 class="text-lg font-bold text-white tracking-tight">Step 10: Fixed-Seed Reproducibility Studio</h2>
+          <p class="text-xs text-gray-400">Requirement: "Regenerate twice with the same seed and compare row counts/checksums to demonstrate reproducibility."</p>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-4 pt-2">
+          <button id="btn-run-reproducibility" onclick="runReproducibilityTest()" 
+                  class="px-5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white rounded-xl text-xs font-semibold shadow-lg shadow-blue-600/30 transition-all flex items-center gap-2">
+            Run Step 10 Reproducibility Verification
+          </button>
+
+          <div class="text-xs text-gray-400">
+            Executes 2 independent passes in backend with seed <code>20261022</code> and hashes all CSV tables.
+          </div>
+        </div>
+      </div>
+
+      <!-- Verification Results Container -->
+      <div id="reproducibility-results" class="hidden space-y-4">
+        <div id="repro-status-banner"></div>
+
+        <div class="glass-panel rounded-2xl border border-gray-800 overflow-hidden shadow-xl">
+          <div class="p-4 border-b border-gray-800 font-bold text-xs text-gray-200">
+            SHA-256 Cryptographic Checksum Comparison (Pass 1 vs Pass 2)
+          </div>
+          <div class="overflow-x-auto">
+            <table class="w-full text-left audit-table">
+              <thead>
+                <tr class="bg-gray-900/60">
+                  <th>Dataset File</th>
+                  <th>Pass 1 SHA-256 Hash</th>
+                  <th>Pass 2 SHA-256 Hash</th>
+                  <th class="text-right">Integrity Status</th>
+                </tr>
+              </thead>
+              <tbody id="repro-checksums-tbody">
+                <!-- Injected via JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Direct File Downloads -->
+      <div class="glass-panel p-5 rounded-2xl border border-gray-800 space-y-3">
+        <h3 class="text-sm font-bold text-white">Direct Dataset Seed Downloads (CSV / JSON / SQLite)</h3>
+        <div class="flex flex-wrap gap-2 text-xs">
+          <a href="/api/download/starter/freight_invoices.csv" class="px-3 py-1.5 bg-gray-900 hover:bg-gray-800 border border-gray-700 rounded-lg text-blue-400 font-mono">freight_invoices.csv</a>
+          <a href="/api/download/starter/invoice_lines.csv" class="px-3 py-1.5 bg-gray-900 hover:bg-gray-800 border border-gray-700 rounded-lg text-blue-400 font-mono">invoice_lines.csv</a>
+          <a href="/api/download/starter/rate_cards.csv" class="px-3 py-1.5 bg-gray-900 hover:bg-gray-800 border border-gray-700 rounded-lg text-blue-400 font-mono">rate_cards.csv</a>
+          <a href="/api/download/starter/shipments.csv" class="px-3 py-1.5 bg-gray-900 hover:bg-gray-800 border border-gray-700 rounded-lg text-blue-400 font-mono">shipments.csv</a>
+          <a href="/api/download/starter/ground_truth.json" class="px-3 py-1.5 bg-gray-900 hover:bg-gray-800 border border-gray-700 rounded-lg text-purple-400 font-mono">ground_truth.json</a>
+          <a href="/api/download/starter/source_manifest.json" class="px-3 py-1.5 bg-gray-900 hover:bg-gray-800 border border-gray-700 rounded-lg text-emerald-400 font-mono">source_manifest.json</a>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- ==================== TAB 7: DATA DICTIONARY ==================== -->
+    <section id="tab-dictionary" class="tab-section hidden space-y-4 fade-in">
+      <div class="glass-panel p-6 rounded-2xl border border-gray-800 space-y-2">
+        <h2 class="text-lg font-bold text-white tracking-tight">Step 1: Data Dictionary & Enterprise Domain Schema</h2>
+        <p class="text-xs text-gray-400">Complete specification of 11 core entities, types, nullable status, allowed values, units, uniqueness and domain validation rules.</p>
+      </div>
+
+      <div class="glass-panel p-6 rounded-2xl border border-gray-800 overflow-x-auto">
+        <div id="data-dictionary-content">
+          <div class="text-center py-8 text-gray-500">Loading data dictionary specifications...</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ==================== INVOICE INSPECTOR MODAL DRAWER ==================== -->
+  <div id="drawer-backdrop" class="drawer-backdrop" onclick="closeInvoiceDrawer()"></div>
+  <aside id="invoice-drawer" class="drawer-content flex flex-col justify-between">
+    
+    <!-- Drawer Header -->
+    <div class="p-6 border-b border-gray-800 flex items-center justify-between sticky top-0 bg-[#111827] z-10">
+      <div>
+        <div class="flex items-center gap-2">
+          <h3 class="text-base font-bold text-white font-mono" id="drawer-invoice-id">FINV-2026-000001</h3>
+          <span class="text-xs text-gray-400 font-mono" id="drawer-invoice-num">INV-100234</span>
+        </div>
+        <p class="text-xs text-gray-400 mt-0.5" id="drawer-carrier-name">Apex Freight Lines (CAR-000001)</p>
+      </div>
+      <button onclick="closeInvoiceDrawer()" class="p-1.5 rounded-lg bg-gray-800 hover:bg-gray-700 text-gray-400 hover:text-white">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+    </div>
+
+    <!-- Drawer Body -->
+    <div class="p-6 space-y-6 flex-1 overflow-y-auto">
+      
+      <!-- Financial Totals Summary Card -->
+      <div class="grid grid-cols-3 gap-3 p-4 bg-gray-900 rounded-xl border border-gray-800 text-center">
+        <div>
+          <div class="text-[10px] text-gray-500 uppercase font-semibold">Billed Total</div>
+          <div class="text-base font-bold text-white mt-1" id="drawer-billed-amount">$0.00</div>
+        </div>
+        <div>
+          <div class="text-[10px] text-gray-500 uppercase font-semibold">Audited Expected</div>
+          <div class="text-base font-bold text-gray-300 mt-1" id="drawer-expected-amount">$0.00</div>
+        </div>
+        <div>
+          <div class="text-[10px] text-gray-500 uppercase font-semibold">Net Discrepancy</div>
+          <div class="text-base font-bold text-red-400 mt-1" id="drawer-variance-amount">$0.00</div>
+        </div>
+      </div>
+
+      <!-- 3-Way Match & Shipment Characteristics -->
+      <div class="space-y-2">
+        <h4 class="text-xs font-bold text-gray-300 uppercase tracking-wider">3-Way Match & Shipment Audit</h4>
+        <div id="drawer-3way-match" class="p-4 bg-gray-900/60 rounded-xl border border-gray-800">
+          <!-- Populated dynamically -->
+        </div>
+      </div>
+
+      <!-- Itemized Line Level Audit Comparison -->
+      <div class="space-y-2">
+        <h4 class="text-xs font-bold text-gray-300 uppercase tracking-wider">Itemized Line-Level Audit Reconciliation</h4>
+        <div class="border border-gray-800 rounded-xl overflow-hidden bg-gray-900/40">
+          <table class="w-full text-left">
+            <thead>
+              <tr class="bg-gray-900 text-[10px] text-gray-400 uppercase border-b border-gray-800">
+                <th class="p-2.5">Line Description</th>
+                <th class="p-2.5 text-right">Billed</th>
+                <th class="p-2.5 text-right">Expected</th>
+                <th class="p-2.5 text-right">Delta</th>
+              </tr>
+            </thead>
+            <tbody id="drawer-lines-tbody">
+              <!-- Populated dynamically -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Drawer Footer Actions -->
+    <div class="p-5 border-t border-gray-800 bg-[#111827] sticky bottom-0 flex items-center justify-between gap-3">
+      <button onclick="triggerReauditFromDrawer()" class="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-xl text-xs font-semibold transition-all">
+        Re-Audit Invoice
+      </button>
+      <button onclick="closeInvoiceDrawer()" class="px-4 py-2 bg-gray-800 hover:bg-gray-700 text-gray-300 rounded-xl text-xs">
+        Close Inspector
+      </button>
+    </div>
+
+  </aside>
+
+  <!-- TOAST CONTAINER -->
+  <div id="toast-container"></div>
+
+  <!-- APPLICATION JAVASCRIPT -->
+  <script src="/static/js/app.js"></script>
+
+</body>
+</html>

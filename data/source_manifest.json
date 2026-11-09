@@ -1,0 +1,42 @@
+{
+  "title": "Freight Invoice Audit & Reconciliation Dataset Manifest",
+  "generator_command": "python generate_dataset.py --seed 20261022 --scale starter",
+  "fixed_seed": 20261022,
+  "scale": "starter",
+  "generated_at": "2026-11-09T10:00:40.986194+00:00",
+  "counts": {
+    "carriers": 10,
+    "lanes": 20,
+    "rate_cards": 400,
+    "shipments": 250,
+    "shipment_legs": 250,
+    "weight_measurements": 250,
+    "accessorials": 7,
+    "freight_invoices": 200,
+    "invoice_lines": 434,
+    "audit_exceptions": 40,
+    "credit_notes": 6,
+    "lifecycle_events": 200,
+    "ground_truth": 200
+  },
+  "csv_checksums_sha256": {
+    "carriers.csv": "aaf8c14419a1b3442f569e6758a8aa2362234dd4ea12958b588264afc718a613",
+    "lanes.csv": "ed1da405eb2cbdb3f46c198128a7313fdfcf3916265e9ec3ad193f346b17c15c",
+    "rate_cards.csv": "c9c8b90e17b99b4969b75a1338e551c58928c583580095ab7d2b97cbcf8b1b39",
+    "shipments.csv": "56e274eae72ac1a09832143a3e7e021004d3dc79305ec1cd5dab3270557fc0b6",
+    "shipment_legs.csv": "a5c5a709d5c61cda7a5a10e346bef9a119160ec5a91492f1a2463199b792a408",
+    "weight_measurements.csv": "7300b6d9c9439cfee0aadb3e54d0bf38d89c9dcf245b420a5751b1c4bb1d9d1b",
+    "accessorials.csv": "60f16531bebb1cc45e36cc2c7446c90631f10cfe1e43f7108651206a96876e94",
+    "freight_invoices.csv": "2ffc96a7c4f4a6f48560e18a5baf58484824c75f5ddd5e39f19e13880aa0cc8a",
+    "invoice_lines.csv": "b4850d21062502cb9f066738c27e4a1129a336d2fbbfdcd1979bdf2b882683a2",
+    "audit_exceptions.csv": "988f667a89c220b72b5f15d45949a94a9bfe7bad64dd4c793dfe3e34df37aad6",
+    "credit_notes.csv": "4bc0290f943f2d28a4f18ede957749810fffbc3a7f6eec96c51de6ef65ea28b0",
+    "audit_events.csv": "cd9ebeb6791802e34669812f68f98ee2991bd8e33ebaaedea6c2f5ee35af1df1",
+    "ground_truth.csv": "0989cc1cc5bd801a466f3dacc4e0fa39447fd66c979010ce797a0937db2a2282"
+  },
+  "validation": {
+    "overall_passed": true,
+    "total_checks": 31,
+    "passed_checks": 31
+  }
+}

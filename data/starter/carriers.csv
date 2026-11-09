@@ -1,0 +1,11 @@
+carrier_id,name,code,contact_email,mode,status,created_at
+CAR-000001,Cascade Lines,CASL,billing@cascade-lines.com,INTERMODAL,ACTIVE,2026-01-01T08:00:00Z
+CAR-000002,Titan Logistics,TITL,billing@titan-logistics.com,LTL,ACTIVE,2026-01-01T08:00:00Z
+CAR-000003,Echo Transport,ECHT,billing@echo-transport.com,FTL,ACTIVE,2026-01-01T08:00:00Z
+CAR-000004,Triton Transit,TRIT,billing@triton-transit.com,LTL,ACTIVE,2026-01-01T08:00:00Z
+CAR-000005,Vanguard Transport,VANT,billing@vanguard-transport.com,LTL,ACTIVE,2026-01-01T08:00:00Z
+CAR-000006,Meridian Cargo,MERC,billing@meridian-cargo.com,FTL,ACTIVE,2026-01-01T08:00:00Z
+CAR-000007,Borealis Transport,BORT,billing@borealis-transport.com,LTL,ACTIVE,2026-01-01T08:00:00Z
+CAR-000008,Beacon Freight,BEAF,billing@beacon-freight.com,LTL,ACTIVE,2026-01-01T08:00:00Z
+CAR-000009,Ironclad Haulage,IROH,billing@ironclad-haulage.com,FTL,ACTIVE,2026-01-01T08:00:00Z
+CAR-000010,Ironclad Freight,IROF,billing@ironclad-freight.com,INTERMODAL,ACTIVE,2026-01-01T08:00:00Z

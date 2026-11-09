@@ -1,0 +1,194 @@
+{
+  "overall_passed": true,
+  "total_checks": 31,
+  "passed_checks": 31,
+  "failed_checks": 0,
+  "checks": [
+    {
+      "check": "PK Uniqueness - Carrier",
+      "passed": true,
+      "message": "Carrier PK uniqueness: 10 rows, 0 duplicates.",
+      "sample_violations": []
+    },
+    {
+      "check": "PK Uniqueness - Lane",
+      "passed": true,
+      "message": "Lane PK uniqueness: 20 rows, 0 duplicates.",
+      "sample_violations": []
+    },
+    {
+      "check": "PK Uniqueness - RateCard",
+      "passed": true,
+      "message": "RateCard PK uniqueness: 400 rows, 0 duplicates.",
+      "sample_violations": []
+    },
+    {
+      "check": "PK Uniqueness - Shipment",
+      "passed": true,
+      "message": "Shipment PK uniqueness: 250 rows, 0 duplicates.",
+      "sample_violations": []
+    },
+    {
+      "check": "PK Uniqueness - ShipmentLeg",
+      "passed": true,
+      "message": "ShipmentLeg PK uniqueness: 250 rows, 0 duplicates.",
+      "sample_violations": []
+    },
+    {
+      "check": "PK Uniqueness - WeightMeasurement",
+      "passed": true,
+      "message": "WeightMeasurement PK uniqueness: 250 rows, 0 duplicates.",
+      "sample_violations": []
+    },
+    {
+      "check": "PK Uniqueness - Accessorial",
+      "passed": true,
+      "message": "Accessorial PK uniqueness: 7 rows, 0 duplicates.",
+      "sample_violations": []
+    },
+    {
+      "check": "PK Uniqueness - FreightInvoice",
+      "passed": true,
+      "message": "FreightInvoice PK uniqueness: 200 rows, 0 duplicates.",
+      "sample_violations": []
+    },
+    {
+      "check": "PK Uniqueness - InvoiceLine",
+      "passed": true,
+      "message": "InvoiceLine PK uniqueness: 434 rows, 0 duplicates.",
+      "sample_violations": []
+    },
+    {
+      "check": "PK Uniqueness - AuditException",
+      "passed": true,
+      "message": "AuditException PK uniqueness: 40 rows, 0 duplicates.",
+      "sample_violations": []
+    },
+    {
+      "check": "PK Uniqueness - CreditNote",
+      "passed": true,
+      "message": "CreditNote PK uniqueness: 6 rows, 0 duplicates.",
+      "sample_violations": []
+    },
+    {
+      "check": "PK Uniqueness - AuditLifecycleEvent",
+      "passed": true,
+      "message": "AuditLifecycleEvent PK uniqueness: 200 rows, 0 duplicates.",
+      "sample_violations": []
+    },
+    {
+      "check": "FK - RateCard to Carrier",
+      "passed": true,
+      "message": "Missing carrier FKs: 0",
+      "sample_violations": []
+    },
+    {
+      "check": "FK - RateCard to Lane",
+      "passed": true,
+      "message": "Missing lane FKs: 0",
+      "sample_violations": []
+    },
+    {
+      "check": "FK - Shipment to Carrier",
+      "passed": true,
+      "message": "Missing carrier FKs: 0",
+      "sample_violations": []
+    },
+    {
+      "check": "FK - Shipment to Lane",
+      "passed": true,
+      "message": "Missing lane FKs: 0",
+      "sample_violations": []
+    },
+    {
+      "check": "FK - WeightMeasurement to Shipment",
+      "passed": true,
+      "message": "Missing shipment FKs: 0",
+      "sample_violations": []
+    },
+    {
+      "check": "FK - InvoiceLine to FreightInvoice",
+      "passed": true,
+      "message": "Missing invoice FKs: 0",
+      "sample_violations": []
+    },
+    {
+      "check": "FK - AuditException to FreightInvoice",
+      "passed": true,
+      "message": "Missing invoice FKs: 0",
+      "sample_violations": []
+    },
+    {
+      "check": "FK - CreditNote to AuditException",
+      "passed": true,
+      "message": "Missing exception FKs: 0",
+      "sample_violations": []
+    },
+    {
+      "check": "Enum - Carrier Mode",
+      "passed": true,
+      "message": "Invalid carrier modes: 0",
+      "sample_violations": []
+    },
+    {
+      "check": "Enum - RateCard Service Level",
+      "passed": true,
+      "message": "Invalid service levels: 0",
+      "sample_violations": []
+    },
+    {
+      "check": "Enum - Invoice Status",
+      "passed": true,
+      "message": "Invalid invoice statuses: 0",
+      "sample_violations": []
+    },
+    {
+      "check": "Enum - Exception Type",
+      "passed": true,
+      "message": "Invalid exception types: 0",
+      "sample_violations": []
+    },
+    {
+      "check": "Date Ordering - RateCard Expiry >= Effective",
+      "passed": true,
+      "message": "Invalid date ranges: 0",
+      "sample_violations": []
+    },
+    {
+      "check": "Date Ordering - Delivery >= Shipment Date",
+      "passed": true,
+      "message": "Invalid delivery dates: 0",
+      "sample_violations": []
+    },
+    {
+      "check": "Date Ordering - Due Date >= Invoice Date",
+      "passed": true,
+      "message": "Invalid due dates: 0",
+      "sample_violations": []
+    },
+    {
+      "check": "Arithmetic - Invoice Billed Amount Equals Sum of Lines",
+      "passed": true,
+      "message": "Mismatched invoice headers: 0",
+      "sample_violations": []
+    },
+    {
+      "check": "Arithmetic - Volumetric Weight Formula (L*W*H/5000)",
+      "passed": true,
+      "message": "Mismatched volumetric weights: 0",
+      "sample_violations": []
+    },
+    {
+      "check": "Lifecycle - Event Trail Exists",
+      "passed": true,
+      "message": "Total lifecycle events recorded: 200",
+      "sample_violations": []
+    },
+    {
+      "check": "Credit Notes - Positive Amounts",
+      "passed": true,
+      "message": "Invalid credit amounts: 0",
+      "sample_violations": []
+    }
+  ]
+}

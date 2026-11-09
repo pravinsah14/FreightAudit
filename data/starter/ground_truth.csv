@@ -1,0 +1,201 @@
+invoice_id,shipment_id,carrier_id,has_anomaly,anomaly_types,expected_audit_decision,expected_disputed_amount,explanation
+FINV-2026-000001,SHP-2026-000001,CAR-000002,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000002,SHP-2026-000002,CAR-000009,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000003,SHP-2026-000003,CAR-000009,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000004,SHP-2026-000004,CAR-000006,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000005,SHP-2026-990005,CAR-000003,True,UNKNOWN_SHIPMENT,FAILED,113.09,Invoice references unknown shipment ID SHP-2026-990005
+FINV-2026-000006,SHP-2026-000006,CAR-000002,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000007,SHP-2026-000007,CAR-000010,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000008,SHP-2026-000008,CAR-000010,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000009,SHP-2026-000009,CAR-000004,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000010,SHP-2026-000010,CAR-000002,True,EXPIRED_RATE_CARD,FAILED,132.48,Applied expired rate schedule; variance exceeds tolerance threshold.
+FINV-2026-000011,SHP-2026-000011,CAR-000005,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000012,SHP-2026-000012,CAR-000001,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000013,SHP-2026-000013,CAR-000002,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000014,SHP-2026-000014,CAR-000006,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000015,SHP-2026-000015,CAR-000007,True,WEIGHT_TIER_MISAPPLIED,FAILED,206.0,Weight tier misapplied; scanner certified weight differs from billed weight.
+FINV-2026-000016,SHP-2026-000016,CAR-000007,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000017,SHP-2026-000017,CAR-000005,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000018,SHP-2026-000018,CAR-000002,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000019,SHP-2026-000019,CAR-000006,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000020,SHP-2026-000020,CAR-000010,True,DUPLICATE_SURCHARGE,FAILED,28.06,Duplicate surcharge entry identified during invoice line reconciliation.
+FINV-2026-000021,SHP-2026-000021,CAR-000001,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000022,SHP-2026-000022,CAR-000004,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000023,SHP-2026-000023,CAR-000010,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000024,SHP-2026-000024,CAR-000004,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000025,SHP-2026-000025,CAR-000010,True,CREDIT_EXCEEDS_EXCEPTION,FAILED,100.0,Credit note amount strictly exceeds approved exception dispute amount.
+FINV-2026-000026,SHP-2026-000026,CAR-000006,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000027,SHP-2026-000027,CAR-000005,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000028,SHP-2026-000028,CAR-000007,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000029,SHP-2026-000029,CAR-000006,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000030,SHP-2026-000025,CAR-000010,True,DUPLICATE_INVOICE,FAILED,195.67,Duplicate invoice received for shipment already settled.
+FINV-2026-000031,SHP-2026-000031,CAR-000007,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000032,SHP-2026-000032,CAR-000008,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000033,SHP-2026-000033,CAR-000009,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000034,SHP-2026-000034,CAR-000009,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000035,SHP-2026-000035,CAR-000008,True,UNAUTHORIZED_ACCESSORIAL,FAILED,85.0,Unauthorized accessorial charge lacks dispatcher pre-approval.
+FINV-2026-000036,SHP-2026-000036,CAR-000005,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000037,SHP-2026-000037,CAR-000009,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000038,SHP-2026-000038,CAR-000007,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000039,SHP-2026-000039,CAR-000010,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000040,SHP-2026-990040,CAR-000002,True,UNKNOWN_SHIPMENT,FAILED,220.07,Invoice references unknown shipment ID SHP-2026-990040
+FINV-2026-000041,SHP-2026-000041,CAR-000003,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000042,SHP-2026-000042,CAR-000004,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000043,SHP-2026-000043,CAR-000009,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000044,SHP-2026-000044,CAR-000006,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000045,SHP-2026-000045,CAR-000009,True,EXPIRED_RATE_CARD,FAILED,130.74,Applied expired rate schedule; variance exceeds tolerance threshold.
+FINV-2026-000046,SHP-2026-000046,CAR-000008,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000047,SHP-2026-000047,CAR-000003,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000048,SHP-2026-000048,CAR-000003,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000049,SHP-2026-000049,CAR-000007,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000050,SHP-2026-000050,CAR-000001,True,WEIGHT_TIER_MISAPPLIED,FAILED,49.95,Weight tier misapplied; scanner certified weight differs from billed weight.
+FINV-2026-000051,SHP-2026-000051,CAR-000002,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000052,SHP-2026-000052,CAR-000002,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000053,SHP-2026-000053,CAR-000007,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000054,SHP-2026-000054,CAR-000008,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000055,SHP-2026-000055,CAR-000002,True,DUPLICATE_SURCHARGE,FAILED,31.27,Duplicate surcharge entry identified during invoice line reconciliation.
+FINV-2026-000056,SHP-2026-000056,CAR-000009,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000057,SHP-2026-000057,CAR-000008,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000058,SHP-2026-000058,CAR-000003,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000059,SHP-2026-000059,CAR-000001,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000060,SHP-2026-000060,CAR-000006,True,CREDIT_EXCEEDS_EXCEPTION,FAILED,100.0,Credit note amount strictly exceeds approved exception dispute amount.
+FINV-2026-000061,SHP-2026-000061,CAR-000009,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000062,SHP-2026-000062,CAR-000008,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000063,SHP-2026-000063,CAR-000004,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000064,SHP-2026-000064,CAR-000009,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000065,SHP-2026-000060,CAR-000006,True,DUPLICATE_INVOICE,FAILED,628.11,Duplicate invoice received for shipment already settled.
+FINV-2026-000066,SHP-2026-000066,CAR-000005,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000067,SHP-2026-000067,CAR-000003,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000068,SHP-2026-000068,CAR-000005,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000069,SHP-2026-000069,CAR-000002,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000070,SHP-2026-000070,CAR-000009,True,UNAUTHORIZED_ACCESSORIAL,FAILED,85.0,Unauthorized accessorial charge lacks dispatcher pre-approval.
+FINV-2026-000071,SHP-2026-000071,CAR-000010,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000072,SHP-2026-000072,CAR-000004,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000073,SHP-2026-000073,CAR-000005,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000074,SHP-2026-000074,CAR-000001,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000075,SHP-2026-990075,CAR-000010,True,UNKNOWN_SHIPMENT,FAILED,752.88,Invoice references unknown shipment ID SHP-2026-990075
+FINV-2026-000076,SHP-2026-000076,CAR-000007,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000077,SHP-2026-000077,CAR-000009,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000078,SHP-2026-000078,CAR-000003,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000079,SHP-2026-000079,CAR-000001,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000080,SHP-2026-000080,CAR-000009,True,EXPIRED_RATE_CARD,FAILED,132.97,Applied expired rate schedule; variance exceeds tolerance threshold.
+FINV-2026-000081,SHP-2026-000081,CAR-000007,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000082,SHP-2026-000082,CAR-000006,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000083,SHP-2026-000083,CAR-000004,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000084,SHP-2026-000084,CAR-000005,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000085,SHP-2026-000085,CAR-000009,True,WEIGHT_TIER_MISAPPLIED,FAILED,97.44,Weight tier misapplied; scanner certified weight differs from billed weight.
+FINV-2026-000086,SHP-2026-000086,CAR-000004,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000087,SHP-2026-000087,CAR-000002,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000088,SHP-2026-000088,CAR-000007,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000089,SHP-2026-000089,CAR-000003,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000090,SHP-2026-000090,CAR-000003,True,DUPLICATE_SURCHARGE,FAILED,42.02,Duplicate surcharge entry identified during invoice line reconciliation.
+FINV-2026-000091,SHP-2026-000091,CAR-000004,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000092,SHP-2026-000092,CAR-000001,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000093,SHP-2026-000093,CAR-000008,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000094,SHP-2026-000094,CAR-000001,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000095,SHP-2026-000095,CAR-000009,True,CREDIT_EXCEEDS_EXCEPTION,FAILED,100.0,Credit note amount strictly exceeds approved exception dispute amount.
+FINV-2026-000096,SHP-2026-000096,CAR-000001,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000097,SHP-2026-000097,CAR-000006,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000098,SHP-2026-000098,CAR-000002,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000099,SHP-2026-000099,CAR-000001,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000100,SHP-2026-000095,CAR-000009,True,DUPLICATE_INVOICE,FAILED,252.94,Duplicate invoice received for shipment already settled.
+FINV-2026-000101,SHP-2026-000101,CAR-000003,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000102,SHP-2026-000102,CAR-000008,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000103,SHP-2026-000103,CAR-000007,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000104,SHP-2026-000104,CAR-000002,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000105,SHP-2026-000105,CAR-000002,True,UNAUTHORIZED_ACCESSORIAL,FAILED,85.0,Unauthorized accessorial charge lacks dispatcher pre-approval.
+FINV-2026-000106,SHP-2026-000106,CAR-000006,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000107,SHP-2026-000107,CAR-000004,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000108,SHP-2026-000108,CAR-000006,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000109,SHP-2026-000109,CAR-000007,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000110,SHP-2026-990110,CAR-000002,True,UNKNOWN_SHIPMENT,FAILED,359.94,Invoice references unknown shipment ID SHP-2026-990110
+FINV-2026-000111,SHP-2026-000111,CAR-000006,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000112,SHP-2026-000112,CAR-000005,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000113,SHP-2026-000113,CAR-000007,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000114,SHP-2026-000114,CAR-000002,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000115,SHP-2026-000115,CAR-000009,True,EXPIRED_RATE_CARD,FAILED,135.77,Applied expired rate schedule; variance exceeds tolerance threshold.
+FINV-2026-000116,SHP-2026-000116,CAR-000008,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000117,SHP-2026-000117,CAR-000008,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000118,SHP-2026-000118,CAR-000010,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000119,SHP-2026-000119,CAR-000005,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000120,SHP-2026-000120,CAR-000003,True,WEIGHT_TIER_MISAPPLIED,FAILED,231.97,Weight tier misapplied; scanner certified weight differs from billed weight.
+FINV-2026-000121,SHP-2026-000121,CAR-000007,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000122,SHP-2026-000122,CAR-000004,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000123,SHP-2026-000123,CAR-000007,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000124,SHP-2026-000124,CAR-000001,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000125,SHP-2026-000125,CAR-000003,True,DUPLICATE_SURCHARGE,FAILED,22.22,Duplicate surcharge entry identified during invoice line reconciliation.
+FINV-2026-000126,SHP-2026-000126,CAR-000004,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000127,SHP-2026-000127,CAR-000003,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000128,SHP-2026-000128,CAR-000009,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000129,SHP-2026-000129,CAR-000009,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000130,SHP-2026-000130,CAR-000003,True,CREDIT_EXCEEDS_EXCEPTION,FAILED,100.0,Credit note amount strictly exceeds approved exception dispute amount.
+FINV-2026-000131,SHP-2026-000131,CAR-000009,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000132,SHP-2026-000132,CAR-000009,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000133,SHP-2026-000133,CAR-000004,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000134,SHP-2026-000134,CAR-000008,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000135,SHP-2026-000130,CAR-000003,True,DUPLICATE_INVOICE,FAILED,224.65,Duplicate invoice received for shipment already settled.
+FINV-2026-000136,SHP-2026-000136,CAR-000004,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000137,SHP-2026-000137,CAR-000008,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000138,SHP-2026-000138,CAR-000009,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000139,SHP-2026-000139,CAR-000003,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000140,SHP-2026-000140,CAR-000008,True,UNAUTHORIZED_ACCESSORIAL,FAILED,85.0,Unauthorized accessorial charge lacks dispatcher pre-approval.
+FINV-2026-000141,SHP-2026-000141,CAR-000008,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000142,SHP-2026-000142,CAR-000006,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000143,SHP-2026-000143,CAR-000001,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000144,SHP-2026-000144,CAR-000008,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000145,SHP-2026-990145,CAR-000006,True,UNKNOWN_SHIPMENT,FAILED,355.47,Invoice references unknown shipment ID SHP-2026-990145
+FINV-2026-000146,SHP-2026-000146,CAR-000008,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000147,SHP-2026-000147,CAR-000002,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000148,SHP-2026-000148,CAR-000005,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000149,SHP-2026-000149,CAR-000001,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000150,SHP-2026-000150,CAR-000006,True,EXPIRED_RATE_CARD,FAILED,133.01,Applied expired rate schedule; variance exceeds tolerance threshold.
+FINV-2026-000151,SHP-2026-000151,CAR-000009,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000152,SHP-2026-000152,CAR-000004,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000153,SHP-2026-000153,CAR-000003,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000154,SHP-2026-000154,CAR-000003,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000155,SHP-2026-000155,CAR-000004,True,WEIGHT_TIER_MISAPPLIED,FAILED,96.59,Weight tier misapplied; scanner certified weight differs from billed weight.
+FINV-2026-000156,SHP-2026-000156,CAR-000007,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000157,SHP-2026-000157,CAR-000007,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000158,SHP-2026-000158,CAR-000008,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000159,SHP-2026-000159,CAR-000002,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000160,SHP-2026-000160,CAR-000002,True,DUPLICATE_SURCHARGE,FAILED,9.32,Duplicate surcharge entry identified during invoice line reconciliation.
+FINV-2026-000161,SHP-2026-000161,CAR-000002,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000162,SHP-2026-000162,CAR-000009,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000163,SHP-2026-000163,CAR-000004,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000164,SHP-2026-000164,CAR-000003,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000165,SHP-2026-000165,CAR-000005,True,CREDIT_EXCEEDS_EXCEPTION,FAILED,100.0,Credit note amount strictly exceeds approved exception dispute amount.
+FINV-2026-000166,SHP-2026-000166,CAR-000009,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000167,SHP-2026-000167,CAR-000008,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000168,SHP-2026-000168,CAR-000006,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000169,SHP-2026-000169,CAR-000002,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000170,SHP-2026-000165,CAR-000005,True,DUPLICATE_INVOICE,FAILED,541.31,Duplicate invoice received for shipment already settled.
+FINV-2026-000171,SHP-2026-000171,CAR-000009,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000172,SHP-2026-000172,CAR-000004,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000173,SHP-2026-000173,CAR-000006,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000174,SHP-2026-000174,CAR-000008,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000175,SHP-2026-000175,CAR-000001,True,UNAUTHORIZED_ACCESSORIAL,FAILED,85.0,Unauthorized accessorial charge lacks dispatcher pre-approval.
+FINV-2026-000176,SHP-2026-000176,CAR-000008,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000177,SHP-2026-000177,CAR-000010,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000178,SHP-2026-000178,CAR-000003,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000179,SHP-2026-000179,CAR-000004,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000180,SHP-2026-990180,CAR-000008,True,UNKNOWN_SHIPMENT,FAILED,586.71,Invoice references unknown shipment ID SHP-2026-990180
+FINV-2026-000181,SHP-2026-000181,CAR-000007,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000182,SHP-2026-000182,CAR-000006,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000183,SHP-2026-000183,CAR-000007,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000184,SHP-2026-000184,CAR-000002,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000185,SHP-2026-000185,CAR-000005,True,EXPIRED_RATE_CARD,FAILED,133.63,Applied expired rate schedule; variance exceeds tolerance threshold.
+FINV-2026-000186,SHP-2026-000186,CAR-000006,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000187,SHP-2026-000187,CAR-000002,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000188,SHP-2026-000188,CAR-000004,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000189,SHP-2026-000189,CAR-000006,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000190,SHP-2026-000190,CAR-000007,True,WEIGHT_TIER_MISAPPLIED,FAILED,75.33,Weight tier misapplied; scanner certified weight differs from billed weight.
+FINV-2026-000191,SHP-2026-000191,CAR-000007,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000192,SHP-2026-000192,CAR-000007,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000193,SHP-2026-000193,CAR-000007,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000194,SHP-2026-000194,CAR-000003,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000195,SHP-2026-000195,CAR-000010,True,DUPLICATE_SURCHARGE,FAILED,51.14,Duplicate surcharge entry identified during invoice line reconciliation.
+FINV-2026-000196,SHP-2026-000196,CAR-000007,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000197,SHP-2026-000197,CAR-000006,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000198,SHP-2026-000198,CAR-000003,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000199,SHP-2026-000199,CAR-000007,False,NONE,PASSED,0.0,Fully reconciled and compliant.
+FINV-2026-000200,SHP-2026-000200,CAR-000004,True,CREDIT_EXCEEDS_EXCEPTION,FAILED,100.0,Credit note amount strictly exceeds approved exception dispute amount.

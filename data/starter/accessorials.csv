@@ -1,0 +1,8 @@
+accessorial_id,code,description,standard_rate,rate_type,requires_preapproval
+ACC-000001,LIFTGATE,Hydraulic liftgate assistance at delivery/pickup,75.0,FLAT,False
+ACC-000002,RESIDENTIAL,Residential delivery surcharge,50.0,FLAT,False
+ACC-000003,INSIDE_PICKUP,Inside building pickup or drop-off,65.0,FLAT,True
+ACC-000004,DETENTION,Driver detention waiting time beyond 2 free hours,85.0,HOURLY,True
+ACC-000005,HAZMAT,Hazardous materials handling surcharge,120.0,FLAT,True
+ACC-000006,STORAGE,Temporary holding storage fee per pallet/day,40.0,PER_PIECE,True
+ACC-000007,RECONSIGN,Reconsignment / redirect fee in transit,95.0,FLAT,True
